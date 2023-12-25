@@ -75,896 +75,842 @@
                     <figcaption style="text-align:center;">
                         </font>
                         <font size=3>
-                            Figure 1. Block diagram of the proposed EVC-USEP architecture
+                            Figure 1. The bock diagram of proposed VECL-TTS model. Contributions are highlighted via red dotted box. 
                         </font>
                     </figcaption>
                     <br>
-                    <h6> <b>VAW-GAN-EVC [1]</b>: A state-of-the-art VAW-GAN-based EVC framework. The decoder is conditioned with F0 and one-hot emotion ID. </h6>
-                    <h6><b>EVC-USEP (proposed) </b>: The proposed one-to-many controllable VAW-GAN-based EVC framework as descript in Figure 1. </h6>
-                    <h6><b>w/o VDP </b>: EVC-USEP without the proposed Virtual Domain Pairing. For more details please refer to the paper. </h6>
-                    <h6><b>w/o FPM </b>: EVC-USEP without the proposed Fake Pair Masking. For more details please refer to the paper. </h6>
-                    <h6> <b>Note:</b>
-                        <h6> (1) EVC-USEP is an one-to-many conversion model for all three EVC tasks, while VAW-GAN-EVC is one-to-one model and trained three times for each task resepectively. </h6>
-                    </h6>
                     <div class="big-screen">
                         <br>
-                        <h2 style="text-decoration: underline;">Emotion Conversion while preserving speaker identity</h2>
+                        <h2 style="text-decoration: underline;">Emotion Similarity</h2>
                         <br>
-                        <!--  Speech Quality Evaluation -->
                         <table class="table">
-                            <thead>
+                            <tr>
+                                <th style="text-align:center;"> Ground Truth</th>
+                                <th style="text-align:center;"> BaseLine (YourTTs)</th>
+                                <th style="text-align:center;"> VECL-TTS</th>
+                                <th style="text-align:center;"> Ablation 1</th>
+                                <th style="text-align:center;"> Ablation 2</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ground Truth/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
 
-                                <tr>
-                                    <th colspan=5>
-                                        <h4>Neutral-to-Angry</h4>
-                                    </th>
-                                </tr>
-                            </thead>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/YourTTS (Baseline)/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/VECL-TTS/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation1/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation2/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ground Truth/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
 
-                            <tbody>
-                                <tr>
-                                    <th style="text-align:center;"> Source</th>
-                                    <th style="text-align:center;"> BaseLine</th>
-                                    <th style="text-align:center;"> EVC-USEP</th>
-                                    <th style="text-align:center;"> w/o VDP</th>
-                                    <th style="text-align:center;"> w/o FPM</th>
-                                </tr>
-                                <!-- single sentence -->
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/YourTTS (Baseline)/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/VECL-TTS/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation1/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation2/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ground Truth/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
 
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Source/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/YourTTS (Baseline)/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/VECL-TTS/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation1/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation2/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ground Truth/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
 
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Angry/VAW-GAN/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Angry/EVC-USEP/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Angry/wo-VDP/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Angry/wo-FPM/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Source/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/YourTTS (Baseline)/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/VECL-TTS/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation1/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation2/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ground Truth/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
 
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Angry/VAW-GAN/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Angry/EVC-USEP/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Angry/wo-VDP/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Angry/wo-FPM/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/YourTTS (Baseline)/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/VECL-TTS/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation1/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation2/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ground Truth/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
 
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th colspan=5>
-                                        <h4>Neutral-to-Fear</h4>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th style="text-align:center;"> Source</th>
-                                    <th style="text-align:center;"> BaseLine</th>
-                                    <th style="text-align:center;"> EVC-USEP</th>
-                                    <th style="text-align:center;"> w/o VDP</th>
-                                    <th style="text-align:center;"> w/o FPM</th>
-                                </tr>
-                                <!-- single sentence -->
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/YourTTS (Baseline)/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/VECL-TTS/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation1/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation2/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ground Truth/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
 
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Source/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/YourTTS (Baseline)/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/VECL-TTS/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation1/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation2/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ground Truth/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
 
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Fear/VAW-GAN/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Fear/EVC-USEP/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Fear/wo-VDP/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Fear/wo-FPM/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Source/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Fear/VAW-GAN/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Fear/EVC-USEP/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Fear/wo-VDP/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Fear/wo-FPM/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th colspan=5>
-                                        <h4>Neutral-to-Happy</h4>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th style="text-align:center;"> Source</th>
-                                    <th style="text-align:center;"> BaseLine</th>
-                                    <th style="text-align:center;"> EVC-USEP</th>
-                                    <th style="text-align:center;"> w/o VDP</th>
-                                    <th style="text-align:center;"> w/o FPM</th>
-                                </tr>
-                                <!-- single sentence -->
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Source/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Happy/VAW-GAN/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Happy/EVC-USEP/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Happy/wo-VDP/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Happy/wo-FPM/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Source/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Happy/VAW-GAN/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Happy/EVC-USEP/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Happy/wo-VDP/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Happy/wo-FPM/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th colspan=5>
-                                        <h4>Neutral-to-Sad</h4>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th style="text-align:center;"> Source</th>
-                                    <th style="text-align:center;"> BaseLine</th>
-                                    <th style="text-align:center;"> EVC-USEP</th>
-                                    <th style="text-align:center;"> w/o VDP</th>
-                                    <th style="text-align:center;"> w/o FPM</th>
-                                </tr>
-                                <!-- single sentence -->
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Source/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Sad/VAW-GAN/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Sad/EVC-USEP/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Sad/wo-VDP/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Sad/wo-FPM/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Source/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Sad/VAW-GAN/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Sad/EVC-USEP/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Sad/wo-VDP/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Sad/wo-FPM/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th colspan=5>
-                                        <h4>Neutral-to-Surprise</h4>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th style="text-align:center;"> Source</th>
-                                    <th style="text-align:center;"> BaseLine</th>
-                                    <th style="text-align:center;"> EVC-USEP</th>
-                                    <th style="text-align:center;"> w/o VDP</th>
-                                    <th style="text-align:center;"> w/o FPM</th>
-                                </tr>
-                                <!-- single sentence -->
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Source/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Surprise/VAW-GAN/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Surprise/EVC-USEP/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Surprise/wo-VDP/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Surprise/wo-FPM/1.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Source/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Surprise/VAW-GAN/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Surprise/EVC-USEP/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Surprise/wo-VDP/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Same_speaker_EVC/Normal-to-Surprise/wo-FPM/2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                
-                            </tbody>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/YourTTS (Baseline)/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/VECL-TTS/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation1/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Emotion_Similarity/Ablation2/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
                         </table>
                     </div>
-                    
                     <div class="big-screen">
                         <br>
-                        <h2 style="text-decoration: underline;">Emotion & Speaker Conversion</h2>
+                        <h2 style="text-decoration: underline;">Speaker Similarity</h2>
                         <br>
-                        <!--  Speech Quality Evaluation -->
                         <table class="table">
-                            <thead>
-
-                                <tr>
-                                    <th colspan=5>
-                                        <h4>Neutral-to-Angry</h4>
-                                    </th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <th style="text-align:center;"> Source</th>
-                                    <th style="text-align:center;"> Target</th>
-                                    <th style="text-align:center;"> EVC-USEP</th>
-                                    <th style="text-align:center;"> w/o VDP</th>
-                                    <th style="text-align:center;"> w/o FPM</th>
-                                </tr>
-                                <!-- single sentence -->
-
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Source/Speaker2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Target/Speaker9.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Angry/EVC-USEP/conv_Speaker2_1_986_Speaker9_Angry.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Angry/wo-VDP/conv_Speaker2_1_986_Speaker9_Angry.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Angry/wo-FPM/conv_Speaker2_1_986_Speaker9_Angry.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Source/Speaker2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Target/Speaker12.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Angry/EVC-USEP/conv_Speaker2_1_986_Speaker12_Angry.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Angry/wo-VDP/conv_Speaker2_1_986_Speaker12_Angry.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Angry/wo-FPM/conv_Speaker2_1_986_Speaker12_Angry.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                
-                            </tbody>
+                            <tr>
+                                <th style="text-align:center;"> Ground Truth</th>
+                                <th style="text-align:center;"> BaseLine (YourTTs)</th>
+                                <th style="text-align:center;"> VECL-TTS</th>
+                                <th style="text-align:center;"> Ablation 1</th>
+                                <th style="text-align:center;"> Ablation 2</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ground Truth/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/YourTTS (Baseline)/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/VECL-TTS/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation1/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation2/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ground Truth/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/YourTTS (Baseline)/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/VECL-TTS/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation1/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation2/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ground Truth/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/YourTTS (Baseline)/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/VECL-TTS/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation1/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation2/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ground Truth/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/YourTTS (Baseline)/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/VECL-TTS/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation1/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation2/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ground Truth/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/YourTTS (Baseline)/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/VECL-TTS/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation1/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation2/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ground Truth/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/YourTTS (Baseline)/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/VECL-TTS/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation1/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation2/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ground Truth/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/YourTTS (Baseline)/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/VECL-TTS/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation1/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation2/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ground Truth/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/YourTTS (Baseline)/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/VECL-TTS/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation1/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Speaker_Similarity/Ablation2/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
                         </table>
-
+                    </div>
+                    <div class="big-screen">
+                        <br>
+                        <h2 style="text-decoration: underline;">Naturalness</h2>
+                        <br>
                         <table class="table">
-                            <thead>
-                                <tr>
-                                    <th colspan=5>
-                                        <h4>Neutral-to-Fear</h4>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th style="text-align:center;"> Source</th>
-                                    <th style="text-align:center;"> Target</th>
-                                    <th style="text-align:center;"> EVC-USEP</th>
-                                    <th style="text-align:center;"> w/o VDP</th>
-                                    <th style="text-align:center;"> w/o FPM</th>
-                                </tr>
-                                <!-- single sentence -->
-
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Source/Speaker2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Target/Speaker9.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Fear/EVC-USEP/conv_Speaker2_1_986_Speaker9_Fear.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Fear/wo-VDP/conv_Speaker2_1_986_Speaker9_Fear.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Fear/wo-FPM/conv_Speaker2_1_986_Speaker9_Fear.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Source/Speaker2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Target/Speaker12.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Fear/EVC-USEP/conv_Speaker2_1_986_Speaker12_Fear.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Fear/wo-VDP/conv_Speaker2_1_986_Speaker12_Fear.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Fear/wo-FPM/conv_Speaker2_1_986_Speaker12_Fear.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th colspan=5>
-                                        <h4>Neutral-to-Happy</h4>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th style="text-align:center;"> Source</th>
-                                    <th style="text-align:center;"> Target</th>
-                                    <th style="text-align:center;"> EVC-USEP</th>
-                                    <th style="text-align:center;"> w/o VDP</th>
-                                    <th style="text-align:center;"> w/o FPM</th>
-                                </tr>
-                                <!-- single sentence -->
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Source/Speaker2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Target/Speaker9.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Happy/EVC-USEP/conv_Speaker2_1_986_Speaker9_Hpppy.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Happy/wo-VDP/conv_Speaker2_1_986_Speaker9_Hpppy.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Happy/wo-FPM/conv_Speaker2_1_986_Speaker9_Hpppy.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Source/Speaker2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Target/Speaker12.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Happy/EVC-USEP/conv_Speaker2_1_986_Speaker12_Hpppy.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Happy/wo-VDP/conv_Speaker2_1_986_Speaker12_Hpppy.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Happy/wo-FPM/conv_Speaker2_1_986_Speaker12_Hpppy.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th colspan=5>
-                                        <h4>Neutral-to-Sad</h4>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th style="text-align:center;"> Source</th>
-                                    <th style="text-align:center;"> Target</th>
-                                    <th style="text-align:center;"> EVC-USEP</th>
-                                    <th style="text-align:center;"> w/o VDP</th>
-                                    <th style="text-align:center;"> w/o FPM</th>
-                                </tr>
-                                <!-- single sentence -->
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Source/Speaker2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Target/Speaker9.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Sad/EVC-USEP/conv_Speaker2_1_986_Speaker9_Sad.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Sad/wo-VDP/conv_Speaker2_1_986_Speaker9_Sad.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Sad/wo-FPM/conv_Speaker2_1_986_Speaker9_Sad.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Source/Speaker2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Target/Speaker12.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Sad/EVC-USEP/conv_Speaker2_1_986_Speaker12_Sad.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Sad/wo-VDP/conv_Speaker2_1_986_Speaker12_Sad.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Sad/wo-FPM/conv_Speaker2_1_986_Speaker12_Sad.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th colspan=5>
-                                        <h4>Neutral-to-Surprise</h4>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th style="text-align:center;"> Source</th>
-                                    <th style="text-align:center;"> Target</th>
-                                    <th style="text-align:center;"> EVC-USEP</th>
-                                    <th style="text-align:center;"> w/o VDP</th>
-                                    <th style="text-align:center;"> w/o FPM</th>
-                                </tr>
-                                <!-- single sentence -->
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Source/Speaker2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Target/Speaker9.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Surprise/EVC-USEP/conv_Speaker2_1_986_Speaker9_Surprise.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Surprise/wo-VDP/conv_Speaker2_1_986_Speaker9_Surprise.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Surprise/wo-FPM/conv_Speaker2_1_986_Speaker9_Surprise.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Source/Speaker2.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Target/Speaker12.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Surprise/EVC-USEP/conv_Speaker2_1_986_Speaker12_Surprise.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Surprise/wo-VDP/conv_Speaker2_1_986_Speaker12_Surprise.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td>
-                                        <audio controls>
-                                            <source src="./Demo/Different_Speaker_EVC/Normal-to-Surprise/wo-FPM/conv_Speaker2_1_986_Speaker12_Surprise.wav" type="audio/wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr>
-                                
-                            </tbody>
+                            <tr>
+                                <th style="text-align:center;"> Ground Truth</th>
+                                <th style="text-align:center;"> BaseLine (YourTTs)</th>
+                                <th style="text-align:center;"> VECL-TTS</th>
+                                <th style="text-align:center;"> Ablation 1</th>
+                                <th style="text-align:center;"> Ablation 2</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ground Truth/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/YourTTS (Baseline)/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/VECL-TTS/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation1/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation2/1.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ground Truth/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/YourTTS (Baseline)/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/VECL-TTS/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation1/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation2/2.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ground Truth/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/YourTTS (Baseline)/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/VECL-TTS/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation1/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation2/3.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ground Truth/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/YourTTS (Baseline)/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/VECL-TTS/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation1/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation2/4.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ground Truth/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/YourTTS (Baseline)/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/VECL-TTS/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation1/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation2/5.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ground Truth/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/YourTTS (Baseline)/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/VECL-TTS/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation1/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation2/6.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ground Truth/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/YourTTS (Baseline)/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/VECL-TTS/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation1/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation2/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ground Truth/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                    
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/YourTTS (Baseline)/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/VECL-TTS/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation1/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="./Demo/Naturalness/Ablation2/8.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </td>
+                            </tr>
                         </table>
                     </div>
                 </div>
